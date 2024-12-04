@@ -1,0 +1,9 @@
+local DrRayLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithub/DrRay-UI-Library/main/DrRay.lua"))()
+
+local window = DrRayLibrary:Load("J Hub", "Default")
+local tab = DrRayLibrary.newTab("Inf Money", "ImageIdHere") 
+
+tab.newButton("Inf Money", "Click once", function()
+    print('Hello!')
+end)
+local rodNames = { "Long Rod", "Rapid Rod", "Developers Rod", "Flimsy Rod", "Pen Rod", "The Lost Rod", "Fortune Rod", "Fast Rod", "Riptide Rod", "Rod Of The Forgotten Fang", "Aurora Rod", "Midas Rod", "Buddy Bond Rod", "Precision Rod", "Wisdom Rod", "Stone Rod", "Seasons Rod", "Steady Rod", "Mythical Rod", "Kings Rod", "Resourceful Rod", "Carbon Rod", "Rod Of The Depths", "Rod Of The Eternal King" } local purchaseEvent = game:GetService('ReplicatedStorage').events.purchase local quantity = math.huge for _, rodName in ipairs(rodNames) do purchaseEvent:FireServer(rodName, 'Rod', nil, quantity) wait(0.1)end
